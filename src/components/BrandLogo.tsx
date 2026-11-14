@@ -4,12 +4,21 @@ import Link from 'next/link';
 interface BrandLogoProps {
   className?: string;
   withTagline?: boolean;
+  subtag?: string;
+  href?: string;
 }
 
-export function BrandLogo({ className = '', withTagline = false }: BrandLogoProps) {
+export function BrandLogo({
+  className = '',
+  withTagline = false,
+  subtag,
+  href = '/',
+}: BrandLogoProps) {
+  const displayTag = subtag || (withTagline ? 'EXPERIENCES' : null);
+
   return (
     <Link
-      href="/"
+      href={href}
       className={`neckt-logo-link ${className}`}
       aria-label="NECKT — Home"
     >
@@ -18,7 +27,7 @@ export function BrandLogo({ className = '', withTagline = false }: BrandLogoProp
         <span className="neckt-brand-text">NECKT</span>
         <div className="neckt-line" aria-hidden="true" />
       </div>
-      {withTagline && <span className="neckt-brand-subtag">EXPERIENCES</span>}
+      {displayTag && <span className="neckt-brand-subtag">{displayTag}</span>}
     </Link>
   );
 }

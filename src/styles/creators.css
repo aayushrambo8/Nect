@@ -1,0 +1,1017 @@
+/* ==========================================================================
+   NECKT — Creators & Staff Backstage Design System
+   ========================================================================== */
+
+/* Navbar Portal Additions */
+.neckt-portal-user-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.neckt-portal-guest-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.neckt-user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  font: 600 0.7rem var(--font-mono);
+  letter-spacing: 0.08em;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.neckt-user-pill__icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent-gold);
+}
+
+.neckt-user-pill__name {
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.neckt-role-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font: 700 0.58rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.neckt-role-tag--creator {
+  background: rgba(168, 63, 186, 0.25);
+  color: #e9b3f5;
+  border: 1px solid rgba(168, 63, 186, 0.5);
+}
+
+.neckt-role-tag--employee {
+  background: rgba(56, 189, 248, 0.2);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+.neckt-role-tag--admin {
+  background: rgba(245, 158, 11, 0.22);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+.neckt-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.neckt-btn-icon:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+}
+
+.neckt-cross-site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-tertiary);
+  font: 600 0.65rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.3rem 0.5rem;
+}
+
+.neckt-cross-site-link:hover {
+  color: var(--accent-gold);
+}
+
+.neckt-subdomain-bridge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  background: rgba(107, 20, 125, 0.18);
+  border: 1px solid rgba(168, 63, 186, 0.35);
+  color: #e9b3f5;
+  font: 600 0.64rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.neckt-subdomain-bridge-btn:hover {
+  background: rgba(168, 63, 186, 0.35);
+  border-color: var(--accent-amber-glow);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.neckt-bridge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a83fba;
+  box-shadow: 0 0 8px #a83fba;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.neckt-mobile-drawer__user-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neckt-btn-text-danger {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font: 600 0.68rem var(--font-mono);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Creators Landing Hero & Tier Grid
+   ========================================================================== */
+.neckt-creators-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem max(1.5rem, calc((100% - 1180px) / 2)) 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neckt-creators-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: max-content;
+  padding: 0.45rem 1rem;
+  background: rgba(107, 20, 125, 0.28);
+  border: 1px solid rgba(168, 63, 186, 0.4);
+  color: #e9b3f5;
+  font: 600 0.68rem var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.neckt-creators-hero__title {
+  font-family: var(--font-hero);
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.neckt-creators-hero__title span {
+  color: var(--accent-gold);
+}
+
+.neckt-creators-hero__subtitle {
+  max-width: 44rem;
+  color: var(--text-secondary);
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.neckt-creators-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* 3-Tier Grid */
+.neckt-tiers-section {
+  padding: 6rem max(1.5rem, calc((100% - 1180px) / 2));
+}
+
+.neckt-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.neckt-tier-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.2rem 2rem;
+  background: var(--glass-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  backdrop-filter: blur(16px);
+  transition: all 0.3s ease;
+}
+
+.neckt-tier-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 63, 186, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.neckt-tier-card--creator {
+  border-top: 3px solid #a83fba;
+}
+
+.neckt-tier-card--employee {
+  border-top: 3px solid #38bdf8;
+}
+
+.neckt-tier-card--admin {
+  border-top: 3px solid #f59e0b;
+}
+
+.neckt-tier-card__header {
+  margin-bottom: 1.5rem;
+}
+
+.neckt-tier-card__role-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: 700 0.65rem var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.neckt-tier-card__role-label--creator { color: #d18add; }
+.neckt-tier-card__role-label--employee { color: #7dd3fc; }
+.neckt-tier-card__role-label--admin { color: #fde68a; }
+
+.neckt-tier-card__title {
+  font-family: var(--font-hero);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.neckt-tier-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.neckt-tier-card__features {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.neckt-tier-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.neckt-tier-card__features li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent-gold);
+}
+
+.neckt-tier-card__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Login Page
+   ========================================================================== */
+.neckt-login-page {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem max(1.5rem, calc((100% - 1180px) / 2)) 4rem;
+}
+
+.neckt-login-card {
+  width: 100%;
+  max-width: 480px;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: rgba(16, 12, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+.neckt-login-card__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.neckt-login-card__headline {
+  font-family: var(--font-hero);
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.neckt-login-card__subheadline {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.neckt-login-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.neckt-form-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.neckt-form-label {
+  color: rgba(255, 255, 255, 0.8);
+  font: 600 0.68rem var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.neckt-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.neckt-input:focus {
+  outline: none;
+  border-color: var(--accent-amber-glow);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.neckt-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #1a1320;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.neckt-error-message {
+  padding: 0.75rem 1rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 4px;
+  color: #fca5a5;
+  font-size: 0.82rem;
+}
+
+.neckt-demo-shortcuts {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neckt-demo-shortcuts__title {
+  color: var(--text-tertiary);
+  font: 600 0.65rem var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.neckt-demo-btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.neckt-demo-btn {
+  padding: 0.65rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border-radius: 4px;
+  font: 600 0.65rem var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.neckt-demo-btn:hover {
+  background: rgba(168, 63, 186, 0.3);
+  border-color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   Dashboard Framework
+   ========================================================================== */
+.neckt-dashboard-wrapper {
+  padding: 8rem max(1.5rem, calc((100% - 1180px) / 2)) 5rem;
+  min-height: 85vh;
+}
+
+/* Admin Tier Simulation Banner */
+.neckt-preview-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  font: 600 0.72rem var(--font-mono);
+  color: #fde68a;
+}
+
+.neckt-preview-banner__switchers {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.neckt-preview-btn {
+  padding: 0.35rem 0.65rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.64rem;
+  transition: all 0.2s ease;
+}
+
+.neckt-preview-btn--active {
+  background: #f59e0b;
+  color: #111;
+  border-color: #f59e0b;
+  font-weight: 700;
+}
+
+/* User Identity Hero Card */
+.neckt-dash-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2.2rem;
+  background: var(--glass-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(16px);
+  margin-bottom: 2rem;
+}
+
+.neckt-dash-header__user {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.neckt-avatar-box {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3d0648, #6b147d);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 1.4rem var(--font-hero);
+  color: #ffffff;
+}
+
+.neckt-dash-header__title {
+  font-family: var(--font-hero);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.neckt-dash-header__subtitle {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.neckt-dash-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.neckt-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font: 600 0.74rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.neckt-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.neckt-tab-btn--active {
+  color: #ffffff;
+  background: rgba(107, 20, 125, 0.3);
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+/* Dashboard Cards & Layout */
+.neckt-dash-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.neckt-dash-full {
+  display: grid;
+  gap: 2rem;
+}
+
+.neckt-card {
+  padding: 1.8rem;
+  background: var(--glass-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  backdrop-filter: blur(14px);
+}
+
+.neckt-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.neckt-card__title {
+  font: 700 0.85rem var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* KPI metric boxes */
+.neckt-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.neckt-kpi-box {
+  padding: 1.4rem;
+  background: rgba(24, 16, 29, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+.neckt-kpi-box__number {
+  font-family: var(--font-hero);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.neckt-kpi-box__label {
+  color: var(--text-tertiary);
+  font: 600 0.65rem var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.35rem;
+}
+
+/* Table styles */
+.neckt-table-container {
+  overflow-x: auto;
+}
+
+.neckt-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.neckt-table th {
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-tertiary);
+  font: 700 0.65rem var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neckt-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  vertical-align: middle;
+}
+
+.neckt-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.neckt-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 9999px;
+  font: 700 0.6rem var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.neckt-status-pill--pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.neckt-status-pill--shortlisted {
+  background: rgba(168, 63, 186, 0.2);
+  color: #d18add;
+  border: 1px solid rgba(168, 63, 186, 0.4);
+}
+
+.neckt-status-pill--approved {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.neckt-status-pill--declined {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.neckt-status-pill--verified {
+  background: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* Operational checklist items */
+.neckt-checklist {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.neckt-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.95rem 1.15rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.neckt-checklist-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.neckt-checklist-item--checked {
+  opacity: 0.65;
+  text-decoration: line-through;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.neckt-checkbox {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #a83fba;
+}
+
+/* Modals */
+.neckt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.neckt-modal-content {
+  width: 100%;
+  max-width: 550px;
+  background: #140e1a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 2.2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+}
+
+.neckt-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsiveness for dashboard */
+@media (max-width: 1024px) {
+  .neckt-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+  .neckt-dash-grid {
+    grid-template-columns: 1fr;
+  }
+  .neckt-kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .neckt-kpi-row {
+    grid-template-columns: 1fr;
+  }
+  .neckt-dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ==========================================================================
+   Clean Login-Only Portal & Sample Logins Grid
+   ========================================================================== */
+.neckt-portal-login-only {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem max(1.5rem, calc((100% - 1180px) / 2)) 5rem;
+}
+
+.neckt-portal-login-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 440px) 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: flex-start;
+}
+
+.neckt-sample-panel {
+  background: var(--glass-card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.neckt-sample-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neckt-sample-panel__title {
+  font-family: var(--font-hero);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #ffffff;
+}
+
+.neckt-sample-tier-section {
+  margin-bottom: 1.8rem;
+}
+
+.neckt-sample-tier-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: 700 0.65rem var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.neckt-sample-tier-heading--creator { color: #d18add; }
+.neckt-sample-tier-heading--employee { color: #7dd3fc; }
+.neckt-sample-tier-heading--admin { color: #fde68a; }
+
+.neckt-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.neckt-sample-card {
+  padding: 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.neckt-sample-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(168, 63, 186, 0.35);
+  transform: translateY(-2px);
+}
+
+.neckt-sample-card__top {
+  margin-bottom: 0.8rem;
+}
+
+.neckt-sample-card__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.neckt-sample-card__title {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  margin-top: 0.2rem;
+}
+
+.neckt-sample-card__creds {
+  margin: 0.75rem 0;
+  padding: 0.55rem 0.75rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font: 600 0.7rem var(--font-mono);
+}
+
+.neckt-sample-card__cred-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.15rem 0;
+}
+
+.neckt-sample-card__label {
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  font-size: 0.62rem;
+}
+
+.neckt-sample-card__val {
+  color: var(--accent-gold);
+}
+
+.neckt-sample-card__actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.neckt-sample-btn-autofill {
+  flex: 1;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ddd;
+  font: 600 0.62rem var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.neckt-sample-btn-autofill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.neckt-sample-btn-quicklogin {
+  flex: 1.2;
+  padding: 0.45rem 0.6rem;
+  background: var(--accent-amber);
+  border: 1px solid var(--accent-amber);
+  color: #111;
+  font: 700 0.62rem var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.neckt-sample-btn-quicklogin:hover {
+  background: var(--accent-amber-glow);
+  border-color: var(--accent-amber-glow);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .neckt-portal-login-layout {
+    grid-template-columns: 1fr;
+  }
+}

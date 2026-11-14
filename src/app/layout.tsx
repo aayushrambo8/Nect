@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import React from 'react';
 import '../index.css';
+import '../styles/creators.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BackgroundLighting from '../components/BackgroundLighting';
+import { CreatorAuthProvider } from '../context/CreatorAuthContext';
 import { SITE_URL } from '../lib/seo';
 
 export const metadata: Metadata = {
@@ -63,14 +65,16 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <BackgroundLighting />
-        <div className="landing-shell">
-          <Header />
-          <main className="landing-main" id="main-content">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <CreatorAuthProvider>
+          <BackgroundLighting />
+          <div className="landing-shell">
+            <Header />
+            <main className="landing-main" id="main-content">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </CreatorAuthProvider>
       </body>
     </html>
   );
